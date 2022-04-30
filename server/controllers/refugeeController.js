@@ -27,6 +27,16 @@ exports.getRefugeeById = async (req, res) => {
 
 // Create a Refugee
 exports.createRefugee = async (req, res) => {
+    const { phoneNumber } = req.body;
+    const refugeeExists = await Refugee.findOne({ phoneNumber });
+    
+    if (refugeeExists) {
+        return res.status(400).json({
+            success: false,
+            message: "Refugee already exists"
+        })
+    }
+
     const { password, ...body } = req.body;
 
     const refugee = await Refugee(body);

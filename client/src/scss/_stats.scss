@@ -1,0 +1,25 @@
+.stats {
+    @include flex($pos: null);
+    height: $stats-height;
+
+    .stat {
+        @include flex($gap: 0.25rem, $col: true);
+        padding: 1rem;
+        width: calc(100% / 3);
+
+        &:not(:last-child) {
+            border-right: 1px solid $primary-color;
+        }
+
+        .title {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: $secondary-color;
+        }
+
+        .desc {
+            font-size: 1.1rem;
+            color: rgb(147, 147, 147);
+        }
+    }
+}

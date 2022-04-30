@@ -1,0 +1,48 @@
+header {
+    @include flex($pos: space-between);
+    height: $header-height;
+    padding: $padding;
+    color: white;
+    background-color: $secondary-color;
+
+    .logo {
+        color: white;
+        cursor: pointer;
+    }
+
+    ul {
+        @include flex($pos: null, $gap: 2rem);
+
+        li {
+            position: relative;
+            font-size: 1rem;
+            cursor: pointer;
+
+            &:not(:last-child)::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: -4px;
+                width: 100%;
+                height: 4px;
+                background-color: $primary-color;
+                transform: scaleX(0);
+                transition: 0.3s ease-in-out;
+            }
+
+            &:hover::after {
+                transform: scaleX(1);
+            }
+        }
+    }
+
+    .btn {
+        background: white !important;
+        color: $secondary-color !important;
+        transition: 0.3s ease-in-out;
+
+        &:hover {
+            opacity: .85;
+        }
+    }
+}

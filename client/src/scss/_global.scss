@@ -1,0 +1,32 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'Oxygen', 'Mukta', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.btn {
+  padding: .4em 1.5em;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background: white;
+  border-radius: 100vw;
+  cursor: pointer;
+
+  &.btn-primary {
+    background: $primary-color;
+    color: white;
+  }
+
+  &.btn-secondary {
+    background: $secondary-color;
+    color: white;
+  }
+}
