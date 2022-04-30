@@ -15,6 +15,8 @@ app.use(cors({
 app.use(express.json());
 
 // routes
+const refugee = require("./routes/refugeeRoute");
 
+app.use("/api/v1", refugee);
 
 module.exports = app;
