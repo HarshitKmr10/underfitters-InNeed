@@ -70,7 +70,7 @@ const Donate = () => {
       <main className='donate-container'>
         <div>
           <h1>Want to Donate?</h1>
-          <img src="assets/images/refugee.jpg" alt="refugee" />
+          <img src="assets/images/donation.jpg" alt="refugee" />
         </div>
         <div>
           <h2>Your Details</h2>
