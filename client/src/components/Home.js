@@ -2,26 +2,33 @@ import React from 'react'
 import MainContainer from './MainContainer'
 import Stats from './Stats'
 import Header from './Header'
-<<<<<<< HEAD
 import { useNavigate } from 'react-router-dom'
 import Footer from './Footer'
-=======
->>>>>>> parent of b516931 (Refugee Registration Added)
 
 const Home = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <Header />
       <MainContainer />
       <Stats />
       <section className='help-container'>
-        <h1>Want to get Help?</h1>
+        <h1>Are you InNeed?</h1>
+        <p>
+          We have helped more than over 50+ refugee communities and are still counting.
+        </p>
         <div className='content'>
           <img src="assets/images/help.svg" alt="help" />
-          <button className='btn btn-secondary help-btn'>Want to get help</button>
+          <div>
+            <p>
+              If you are in need of some basic facilities, please contact us by registering using the link below.
+              We will collaborate with government agencies to provide you with the best possible solution.
+            </p>
+            <button className='btn btn-secondary help-btn' onClick={() => navigate("/register")}>I Want to get help</button>
+          </div>
         </div>
       </section>
-<<<<<<< HEAD
       <section className='our-services-section'>
         <h1>Our Services</h1>
         <div className='content'>
@@ -52,13 +59,11 @@ const Home = () => {
         <button className='btn btn-secondary' onClick={() => navigate("/donate")}>Donate</button>
       </section>
       <section className='news'>
-      <h1>News About Refugees</h1>
-      <p>Check out some charts and facts about Refugees!</p>
-      <iframe title='apex-chart' src="https://apex.oracle.com/pls/apex/f?p=87945:2:"></iframe>
+        <h1>News About Refugees</h1>
+        <p>Check out some charts and facts about Refugees!</p>
+        <iframe title='apex-chart' src="https://apex.oracle.com/pls/apex/f?p=87945:2:"></iframe>
       </section>
       <Footer />
-=======
->>>>>>> parent of b516931 (Refugee Registration Added)
     </>
   )
 }

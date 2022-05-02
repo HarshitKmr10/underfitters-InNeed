@@ -23,8 +23,8 @@ const refugeeSchema = mongoose.Schema({
         default: "",
     },
     phoneNumber: {
-        type: Number,
-        default: 0,
+        type: String,
+        required: [true, "Please enter phone number"],
         maxLength: [10, "Phone number cannot exceed 10 digits"]
     },
     password: {

@@ -1,0 +1,43 @@
+.our-services-section {
+    padding: $padding;
+    padding-top: 3rem;
+    margin-bottom: 5rem;
+
+    h1 {
+        font-size: 3rem;
+        color: $secondary-color;
+        text-align: left;
+        margin-bottom: 1rem;
+    }
+
+    .content {
+        @include flex($pos: space-between);
+
+        div {
+            flex-basis: 40%;
+        }
+
+        p {
+            margin-bottom: 0.75rem;
+            font-size: 1rem;
+
+            span {
+                font-weight: bold;
+                color: $secondary-color;
+            }
+        }
+
+        .btn {
+            color: $secondary-color;
+            padding: 0;
+
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+
+        img {
+            width: 50%;
+        }
+    }
+}

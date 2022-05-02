@@ -6,7 +6,7 @@ const Header = () => {
 
   return (
     <header>
-      <h2 className='logo'>Refugee</h2>
+      <h2 className='logo' onClick={() => navigate("/")}>InNeed</h2>
       <ul>
         <li>About Us</li>
         <li onClick={() => navigate("/donate")}>Donate</li>

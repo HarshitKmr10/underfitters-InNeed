@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const MainContainer = () => {
 
   const [images, setImages] = useState([]);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setImages([
@@ -66,7 +68,7 @@ const MainContainer = () => {
         <h1>Help people who lost their everything.</h1>
         <p>Stand with us to help the ones whom lives got destroyed and provide them with basic facilities</p>
         <div className='btn-container'>
-          <button className='btn btn-secondary donate-btn'>Donate</button>
+        <button className='btn btn-secondary donate-btn' onClick={() => navigate("/donate")}>Donate</button>
         </div>
       </div>
     </main>

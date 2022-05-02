@@ -29,4 +29,12 @@ ul {
     background: $secondary-color;
     color: white;
   }
+
+  &.btn-border {
+    box-shadow: 0 0 0 1px $secondary-color;
+  }
+}
+
+.d-none {
+  display: none;
 }

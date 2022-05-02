@@ -1,12 +1,8 @@
-<<<<<<< HEAD
 import React, { useState, useEffect } from 'react'
-=======
-import React from 'react'
->>>>>>> parent of b516931 (Refugee Registration Added)
 import Header from './Header'
+import axios from 'axios'
 
 const Register = () => {
-<<<<<<< HEAD
   const [stage, setStage] = useState(0);
   const [fullName, setFullName] = useState("");
   const [age, setAge] = useState("");
@@ -142,11 +138,6 @@ const Register = () => {
           </div>
         </div>
       </main>
-=======
-  return (
-    <>
-        <Header />
->>>>>>> parent of b516931 (Refugee Registration Added)
     </>
   )
 }
