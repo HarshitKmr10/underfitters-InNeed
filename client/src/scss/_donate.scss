@@ -1,0 +1,107 @@
+.donate-container {
+    @include flex($pos: space-between);
+    align-items: initial;
+    padding: $padding;
+    margin: 3rem 0;
+
+    h1,
+    h2 {
+        margin-bottom: 2rem;
+    }
+
+    h2 {
+        position: relative;
+        width: fit-content;
+
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -.25rem;
+            height: .25rem;
+            width: 100%;
+            background: $secondary-color;
+        }
+    }
+
+    img {
+        width: 350px;
+        height: 325px;
+    }
+
+    .donate-form {
+        @include flex($pos: null, $gap: 1rem, $col: true);
+        --form-width: 350px;
+
+        input,
+        select,
+        textarea {
+            min-width: var(--form-width);
+            padding: .5rem;
+            border: 2px solid #ddd;
+            border-radius: 0.25rem;
+
+            &:focus,
+            &:focus-visible {
+                outline: none;
+                border: 2px solid $secondary-color;
+            }
+        }
+
+        select {
+            color: #7e8282;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        .donate-btn {
+            min-width: var(--form-width);
+            border-radius: 0;
+            padding: .6em 1em;
+            transition: 0.2s ease-in-out;
+
+            &:focus,
+            &:hover {
+                background: $primary-color;
+            }
+        }
+
+        .stage-btn {
+            min-width: calc((var(--form-width) / 2 - 0.5rem));
+
+            &:first-child {
+
+                &:focus,
+                &:hover {
+                    background: rgb(240, 240, 240);
+                }
+            }
+        }
+
+        small {
+            align-self: flex-start;
+            color: red;
+        }
+
+        .payment-gateway {
+            @include flex($pos: space-evenly, $gap: 1rem);
+            width: 80%;
+            
+            button {
+                @include flex;
+                border-radius: 0;
+                font-size: 2rem;
+                padding: 0.1rem 2rem;
+                color: black;
+                cursor: pointer;
+            }
+
+            svg {
+                pointer-events: none;
+            }
+        }
+    }
+
+}

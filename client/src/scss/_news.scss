@@ -1,0 +1,16 @@
+.news {
+    padding-top: 3rem;   
+    margin-bottom: 2rem;
+
+    h1 {
+        padding: $padding;
+        text-align: center;
+        font-size: 3rem;
+        color: $secondary_color;
+    }
+
+    p {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+}

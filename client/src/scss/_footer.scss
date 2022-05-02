@@ -1,0 +1,61 @@
+footer {
+    position: relative;
+    @include flex($pos: space-between);
+    align-items: flex-start;
+    height: 200px;
+    padding: $padding;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
+    background: $secondary_color;
+
+    &>div {
+        @include flex($pos: null, $gap: 0.35rem, $col: true);
+        align-items: initial;
+    }
+
+    .social-handles {
+        flex-direction: column;
+        color: white;
+
+        h6 {
+            font-weight: normal;
+            font-size: 1rem;
+        }
+
+        &>div {
+            @include flex($gap: 1rem);
+            cursor: pointer;
+
+            a {
+                display: block;
+                color: white;
+                text-decoration: none;
+            }
+
+            svg {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .btn {
+        color: white;
+        background: none;
+        border-radius: 0;
+        padding: 0;
+        width: fit-content;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    span {
+        position: absolute;
+        left: 50%;
+        bottom: 1rem;
+        transform: translateX(-50%);
+        color: white;
+        font-size: 0.9rem;
+    }
+}
