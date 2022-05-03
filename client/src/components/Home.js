@@ -41,9 +41,9 @@ const Home = () => {
               All our services include medication, employment, food security, education, shelter and personal psychologist sessions if needed.
             </p>
             <p>
-              We aim to work with even more with these organizations in the upcoming years and expand our community, inviting more helpful people to join with us.
+              We aim to work even more with these organizations in the upcoming years and expand our community, inviting more helpful people to join with us.
             </p>
-            <button className='btn' onClick={() => navigate("/our-services")}>To know more about our services visit click here.</button>
+            <button className='btn' onClick={() => navigate("/our-services")}>To know more about our services click here.</button>
           </div>
           <img src="assets/images/school.jpg" alt='school' />
         </div>
