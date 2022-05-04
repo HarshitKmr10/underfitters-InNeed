@@ -37,7 +37,7 @@ const Register = () => {
     const data = { fullName, age, gender, country, email, phoneNumber, currentAddress, reasonForLeaving, password: "" };
     try {
       await axios.post(process.env.REACT_APP_API_URL + "refugee/new", data);
-      alert("Registered Successfully");
+      alert("Registered Successfully!");
     } catch (error) {
       console.log(error);
       alert("Refugee Already Exists.");
