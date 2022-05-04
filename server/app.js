@@ -6,6 +6,8 @@ const dotenv = require("dotenv");
 dotenv.config({path: "./config/.env"});
 const { CLIENT_URL } = process.env;
 
+console.log("Client Url:", CLIENT_URL);
+
 // middleware
 app.use(cors({
     origin: CLIENT_URL,
